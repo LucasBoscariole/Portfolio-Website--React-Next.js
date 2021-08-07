@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import classes from './Hero.module.css';
-import image from '../../images/backgroundHome.png';
 
 const Hero = () => {
   return (
     <section className={classes.container}>
-      <img src={image} alt='photographer background' />
+      <img
+        src='https://images.unsplash.com/photo-1579260729526-ca1e77ad9092?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'
+        alt='photographer background'
+      />
       <article className={classes.text}>
         <h2>Welcome</h2>
         <h1>I'm Froddy Jeorge</h1>

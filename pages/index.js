@@ -1,3 +1,4 @@
+import Hero from '@components/Home/Hero';
 import Head from 'next/head';
 import { Fragment } from 'react';
 
@@ -9,9 +10,7 @@ export default function Home({ items }) {
         <meta name='description' content='This is the first page' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      {items.map((item, index) => (
-        <h1 key={index}>{item.title}</h1>
-      ))}
+      <Hero />
     </Fragment>
   );
 }
