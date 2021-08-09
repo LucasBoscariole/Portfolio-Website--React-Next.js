@@ -1,96 +1,95 @@
 .container {
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
-  height: 100vh;
+  justify-content: center;
 }
 
-.container img {
-  position: absolute;
-  top: 0;
-  right: 0;
+.image {
   width: 100vw;
   height: 100vh;
+  position: absolute;
   object-fit: cover;
-  z-index: -10;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.black_background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.text {
+  width: 35vw;
+  z-index: 1;
+  text-align: center;
 }
 
-.text {
-  width: 30%;
-  display: block;
-  z-index: 1;
-}
-.text h2 {
-  font-size: 1.1rem;
-  color: var(--contrast-one);
-  padding-bottom: 1rem;
+.text h3 {
   margin: 0;
+  padding-bottom: 1rem;
+  color: var(--contrast-one);
 }
 .text h1 {
-  font-size: 2rem;
-  color: var(--white);
-  padding-bottom: 1rem;
   margin: 0;
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  color: var(--white);
 }
 .text p {
-  font-size: 1rem;
-  color: var(--contrast-two);
-  padding-bottom: 01rem;
   margin: 0;
-  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  color: var(--contrast-two);
 }
 .text a {
+  margin: 0;
   text-decoration: none;
   padding: 1rem 3rem;
-  background: var(--first-color);
-  color: var(--white);
-  text-transform: capitalize;
-  letter-spacing: 1px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin-bottom: 1rem;
-}
-.text a:hover {
-  background: var(--third-color);
-}
-
-.icons {
-  display: grid;
-  z-index: 99;
-}
-
-.icons a {
-  margin: 1.5rem 0;
-}
-
-.icons svg {
-  font-size: 2rem;
   color: #fff;
+  text-transform: capitalize;
+  border: 1px solid var(--first-color);
+  outline: none;
+  background: var(--first-color);
+  transition: 0.4s;
+}
+
+.text a:hover {
+  border: 1px solid var(--third-color);
+}
+
+.text a:last-of-type {
+  background: var(--first-color);
+  margin-left: 3rem;
+}
+
+.textcontainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 3rem;
+}
+.textcontainer svg {
+  color: var(--white);
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-  }
-  .container img {
-    width: 100%;
-    height: 100vh;
-  }
   .text {
     width: 100%;
   }
-  .icons {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 3rem;
+  .text h1 {
+    font-size: 2.5rem;
   }
-  .icons svg {
-    padding: 0;
+  .text p {
+    font-size: 0.9rem;
+  }
+  .text a {
+    padding: 1rem 2rem;
   }
 }

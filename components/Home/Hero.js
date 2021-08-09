@@ -1,35 +1,51 @@
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
+import { FaFacebook, FaInstagram, FaLinkedin, FaReddit } from 'react-icons/fa';
+import TextTransition from 'react-text-transition';
 import classes from './Hero.module.css';
+// import Image from 'next/image';
+
+const TEXT = ['a Photographer', 'George Griffin', 'from USA'];
 
 const Hero = () => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex((index) => index + 1), 3000;
+    });
+    return () => clearTimeout(intervalId);
+  }, []);
   return (
     <section className={classes.container}>
       <img
-        src='https://images.unsplash.com/photo-1579260729526-ca1e77ad9092?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'
-        alt='photographer background'
+        src='/images/background.jpg'
+        alt='background image'
+        className={classes.image}
       />
+      <div className={classes.black_background}></div>
       <article className={classes.text}>
-        <h2>Welcome</h2>
-        <h1>I'm Froddy Jeorge</h1>
+        <h3>Welcome</h3>
+        <h1>
+          I'm{' '}
+          <TextTransition
+            text={TEXT[index % TEXT.length]}
+            springConfig={presents.gentle}
+          />
+        </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-          voluptatibus iure ipsa consequatur dolores at repellendus quo
-          doloremque et quam maxime deleniti tempore quasi vero odit repudiandae
-          asperiores dolore in?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          minima hic quaerat excepturi culpa reiciendis assumenda iusto
+          deserunt, sit quibusdam. Voluptas possimus nobis, temporibus quis
+          porro sapiente a sit numquam.
         </p>
         <Link href='/services'>services</Link>
-      </article>
-      <article className={classes.icons}>
-        <a href='https://instagram.com' target='_blank'>
-          <FaInstagram />
-        </a>
-        <a href='https://facebook.com' target='_blank'>
+        <Link href='/contact'>Contact</Link>
+        <div className={classes.textcontainer}>
           <FaFacebook />
-        </a>
-        <a href='https://linkedin.com' target='_blank'>
+          <FaInstagram />
           <FaLinkedin />
-        </a>
+          <FaReddit />
+        </div>
       </article>
     </section>
   );
