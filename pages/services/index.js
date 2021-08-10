@@ -1,14 +1,29 @@
-import Head from 'next/head'
-import { Fragment } from 'react'
+import Services from '@components/Services/Services';
+import Head from 'next/head';
+import { Fragment } from 'react';
 
-export default function Contact() {
+export default function Contact({ items }) {
   return (
     <Fragment>
       <Head>
-        <title>My Portfolio | Projects</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head> 
-      <h1>Projects</h1>
+        <title>My Portfolio | Services</title>
+        <link rel='icon' href='/favicon.ico' />
+        <meta
+          name='description'
+          content="i'm a photographer based in Paris. This is the services that I provide."
+        />
+      </Head>
+      <Services items={items} isServicesOpen />
     </Fragment>
-  )
+  );
+}
+
+export async function getStaticProps() {
+  const portfolioData = await import(`../../portfolio.json`);
+
+  return {
+    props: {
+      items: portfolioData.items,
+    },
+  };
 }

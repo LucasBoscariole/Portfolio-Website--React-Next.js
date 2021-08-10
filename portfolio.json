@@ -1,28 +1,31 @@
 {
   "items": [
     {
-      "title": "Painting of cat",
-      "description": "This is a painting of a cat",
-      "image": "http://placekitten.com/200/200",
-      "slug": "painting"
+      "title": "Complete Photo Albumn",
+      "meta_description": "Photographer bases on Paris, France that provides Complete Photo Library.",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus necessitatibus earum obcaecati officia. Impedit quasi consequatur cumque accusantium, rem voluptate cupiditate quia explicabo et illum voluptatum ipsum. Consequuntur asperiores quos natus quasi, numquam corrupti iusto officia accusantium molestiae illum nulla neque rerum eveniet assumenda cumque? Aliquam, quasi sequi? Voluptate ipsa accusamus illo? Consequuntur, consequatur porro natus saepe iste nisi pariatur!",
+      "price": 900.0,
+      "hour": false,
+      "image": "/images/servicesPhotoAlbumn.jpg",
+      "slug": "albumn"
     },
     {
-      "title": "Photo of cat",
-      "description": "This is a photo of a cat",
-      "image": "http://placekitten.com/200/210",
-      "slug": "photo"
+      "title": "Photo Editing",
+      "meta_description": "Photo Editing with Photoshop, great rates.",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus necessitatibus earum obcaecati officia. Impedit quasi consequatur cumque accusantium, rem voluptate cupiditate quia explicabo et illum voluptatum ipsum. Consequuntur asperiores quos natus quasi, numquam corrupti iusto officia accusantium molestiae illum nulla neque rerum eveniet assumenda cumque? Aliquam, quasi sequi? Voluptate ipsa accusamus illo? Consequuntur, consequatur porro natus saepe iste nisi pariatur!",
+      "price": 100.0,
+      "hour": false,
+      "image": "/images/servicesPhotoEditing.jpg",
+      "slug": "editing"
     },
     {
-      "title": "Mirage of cat",
-      "description": "This is a mirage of a cat",
-      "image": "http://placekitten.com/200/220",
-      "slug": "mirage"
-    },
-    {
-      "title": "Dream of cat",
-      "description": "This is a dream of a cat",
-      "image": "http://placekitten.com/150/160",
-      "slug": "dream"
+      "title": "Half-day photo shooting",
+      "meta_description": "Half-day photo shooting with beautifull backgrounds.",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus necessitatibus earum obcaecati officia. Impedit quasi consequatur cumque accusantium, rem voluptate cupiditate quia explicabo et illum voluptatum ipsum. Consequuntur asperiores quos natus quasi, numquam corrupti iusto officia accusantium molestiae illum nulla neque rerum eveniet assumenda cumque? Aliquam, quasi sequi? Voluptate ipsa accusamus illo? Consequuntur, consequatur porro natus saepe iste nisi pariatur!",
+      "price": 30.0,
+      "hour": true,
+      "image": "/images/servicesPhotoShooting.jpg",
+      "slug": "shooting"
     }
   ]
 }

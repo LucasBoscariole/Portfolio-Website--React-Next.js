@@ -1,5 +1,6 @@
 import About from '@components/About/About';
 import Hero from '@components/Home/Hero';
+import Services from '@components/Services/Services';
 import Head from 'next/head';
 import { Fragment } from 'react';
 
@@ -13,6 +14,7 @@ export default function Home({ items }) {
       </Head>
       <Hero />
       <About />
+      <Services items={items} />
     </Fragment>
   );
 }
