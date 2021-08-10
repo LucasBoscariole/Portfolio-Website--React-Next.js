@@ -1,40 +1,65 @@
 .wrapper {
   width: 90%;
-  height: 100vh;
+  min-height: 50vh;
   display: block;
   margin: 0 auto;
 }
 
 .header {
+  color: var(--white);
   margin: 2rem auto 1rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .underline {
   width: 60%;
   height: 3px;
+  margin: 0 auto 1rem;
   background: var(--first-color);
 }
 
+.containerimg {
+  width: 50%;
+  position: relative;
+}
+
 .image {
-  width: 40vw;
-  height: 80vh;
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+  border: 3px solid var(--contrast-one);
+}
+
+.containerimg::before {
+  content: '';
+  position: absolute;
+  bottom: -2vh;
+  right: -2vw;
+  width: 30vw;
+  height: 60vh;
+  z-index: -1;
+  border: 5px solid var(--white);
 }
 
 .container {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .containertext {
-  width: 40%;
+  width: 45%;
   display: block;
 }
 
 .containertext h2 {
   color: var(--white);
   letter-spacing: 2px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -42,8 +67,13 @@
 .containertext p {
   color: var(--contrast-one);
   letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.containertext p:last-of-type {
+  margin-bottom: 3rem;
 }
 
 .containertext a {
@@ -52,8 +82,39 @@
   background: var(--first-color);
   transition: 0.4s;
   border: 1px solid var(--first-color);
+  text-decoration: none;
 }
 
 .containertext a:hover {
   background: var(--second-color);
+}
+
+@media screen and (max-width: 768px) {
+  .underline {
+    width: 80%;
+  }
+  .containerimg,
+  .containertext {
+    width: 100%;
+  }
+  .containerimg {
+    margin-bottom: 2rem;
+  }
+  .containertext h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .containertext p {
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+  .containerimg::before {
+    width: 70vw;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .containertext p:last-of-type {
+    margin-bottom: 2rem;
+  }
 }
