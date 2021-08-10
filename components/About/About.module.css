@@ -15,7 +15,7 @@
 .underline {
   width: 60%;
   height: 3px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 2rem;
   background: var(--first-color);
 }
 
@@ -87,6 +87,24 @@
 
 .containertext a:hover {
   background: var(--second-color);
+}
+
+.hero {
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.heroActive {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 768px) {

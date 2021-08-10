@@ -71,9 +71,25 @@
   width: 90%;
   margin: 3rem auto 0;
 }
+
+.textcontainer a {
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+}
+.textcontainer a:hover {
+  background: none;
+  border: none;
+}
+
 .textcontainer svg {
   color: var(--white);
   font-size: 2rem;
+  transition: 0.4s;
+}
+.textcontainer svg:hover {
+  color: var(--first-color);
 }
 
 @media screen and (max-width: 768px) {

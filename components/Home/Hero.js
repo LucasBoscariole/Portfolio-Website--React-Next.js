@@ -24,10 +24,34 @@ const Hero = () => {
         </p>
         <Link href='/contact'>Contact</Link>
         <div className={classes.textcontainer}>
-          <FaFacebook />
-          <FaInstagram />
-          <FaLinkedin />
-          <FaReddit />
+          <a
+            href='https://facebook.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href='https://intagram.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href='https://linkedin.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href='https://reddit.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaReddit />
+          </a>
         </div>
       </article>
     </section>

@@ -1,11 +1,26 @@
 const { default: Link } = require('next/link');
+import { Fragment } from 'react';
 import classes from './About.module.css';
 
-const About = () => {
+const About = ({ isAboutPage }) => {
   return (
     <section className={classes.wrapper}>
-      <h1 className={classes.header}>About Me</h1>
-      <div className={classes.underline}></div>
+      {isAboutPage ? (
+        <img
+          src='/images/aboutHero.jpg'
+          alt='about hero'
+          className={classes.hero}
+        />
+      ) : null}
+      {isAboutPage ? (
+        <h1 className={classes.heroActive}>About Me</h1>
+      ) : (
+        <Fragment>
+          {' '}
+          <h1 className={classes.header}>About Me</h1>
+          <div className={classes.underline}></div>
+        </Fragment>
+      )}
       <article className={classes.container}>
         <div className={classes.containerimg}>
           <img src='/images/about.jpg' alt='' className={classes.image} />
