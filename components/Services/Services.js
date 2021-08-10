@@ -4,8 +4,6 @@ import classes from './Services.module.css';
 import { FaChevronRight } from 'react-icons/fa';
 
 const Services = ({ items, isServicesOpen }) => {
-  console.log(items);
-  console.log(isServicesOpen);
   return (
     <section className={classes.wrapper}>
       {isServicesOpen ? (

@@ -3,6 +3,7 @@ import Hero from '@components/Home/Hero';
 import Services from '@components/Services/Services';
 import Head from 'next/head';
 import { Fragment } from 'react';
+import Contact from '@components/Contact/Contact';
 
 export default function Home({ items }) {
   return (
@@ -15,6 +16,7 @@ export default function Home({ items }) {
       <Hero />
       <About />
       <Services items={items} />
+      <Contact />
     </Fragment>
   );
 }

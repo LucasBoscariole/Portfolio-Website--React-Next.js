@@ -1,14 +1,29 @@
+import Service from '@components/SinglePage/Service';
 import Head from 'next/head';
 import { Fragment } from 'react';
 
-export default function Item({ title, description, image }) {
+export default function Item({
+  title,
+  meta_description,
+  description,
+  image,
+  price,
+  hour,
+}) {
   return (
     <Fragment>
       <Head>
         <title>My Portfolio | {title}</title>
         <link rel='icon' href='/favicon.ico' />
+        <meta name='description' content={meta_description} />
       </Head>
-      <h1>{title}</h1>
+      <Service
+        title={title}
+        description={description}
+        image={image}
+        price={price}
+        hour={hour}
+      />
     </Fragment>
   );
 }
@@ -20,13 +35,17 @@ export async function getStaticProps({ ...ctx }) {
     return i.slug === ctx.params.service;
   });
 
-  let { title, description, image } = currentItem[0];
+  let { title, meta_description, description, image, price, hour } =
+    currentItem[0];
 
   return {
     props: {
       title,
+      meta_description,
       description,
       image,
+      price,
+      hour,
     },
   };
 }

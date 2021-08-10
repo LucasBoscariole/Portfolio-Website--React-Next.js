@@ -1,0 +1,179 @@
+.wrapper {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.image {
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.header_services {
+  color: var(--white);
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.header {
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.underline {
+  width: 60%;
+  height: 3px;
+  background: var(--first-color);
+  margin: 1rem auto;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.textcontainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+  min-height: 60vh;
+  border: 2px solid var(--white);
+}
+
+.form {
+  display: grid;
+  padding: 1rem 0 0 1rem;
+}
+
+.form input,
+.form textarea {
+  background: none;
+  color: var(--white);
+  border: none;
+  border-bottom: 3px solid var(--white);
+  width: 25vw;
+  height: 50px;
+  letter-spacing: 1px;
+  padding-left: 1rem;
+  transition: 0.4s;
+  margin-bottom: 1rem;
+}
+.form textarea {
+  height: 100px;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--white);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--first-color);
+}
+
+.form button {
+  padding: 1rem 2rem;
+  color: var(--white);
+  background: var(--first-color);
+  border: none;
+  cursor: pointer;
+}
+
+.text_contact {
+  display: block;
+  padding: 1rem 1rem 0 0;
+}
+
+.text_contact h3 {
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.text_contact p {
+  color: var(--contrast-one);
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.flex a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.svg {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.imagecontainer {
+  width: 45%;
+  height: 60vh;
+}
+
+.imagecontainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .header,
+  .header_services {
+    font-size: 1.5rem;
+  }
+  .underline {
+    width: 70vw;
+  }
+  .textcontainer {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .form {
+    width: 100%;
+  }
+  .form input,
+  .form textarea {
+    width: 90%;
+  }
+  .form button {
+    width: 90%;
+  }
+  .text_contact {
+    padding: 1rem;
+  }
+  .imagecontainer {
+    width: 100%;
+  }
+}
