@@ -2,6 +2,7 @@ import Header from '@components/Header/Header';
 import Dropdown from '@components/Header/Dropdown';
 import { Fragment, useState } from 'react';
 import '../styles/globals.css';
+import Footer from '@components/Footer/Footer';
 
 function MyApp({ Component, pageProps }) {
   // Toggle Menu
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
       <Header toggle={toggle} />
       <Dropdown toggle={toggle} isopen={isOpen} />
       <Component {...pageProps} />
+      <Footer />
     </Fragment>
   );
 }
